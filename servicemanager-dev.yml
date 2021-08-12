@@ -18,5 +18,4 @@ resilience4j.circuitbreaker:
         - java.io.IOException
   instances:
         testApplication/test/get-response1:
-            baseConfig: default
             failureRateThreshold: 10
