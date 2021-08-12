@@ -14,7 +14,7 @@ resilience4j.circuitbreaker:
       failureRateThreshold: 90
       eventConsumerBufferSize: 10
   instances:
-    backendB/test/name:
+    backendB-test-name:
       registerHealthIndicator: true
       slidingWindowSize: 10
       minimumNumberOfCalls: 10
