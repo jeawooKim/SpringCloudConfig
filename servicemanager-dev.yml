@@ -13,8 +13,12 @@ resilience4j.circuitbreaker:
       waitDurationInOpenState: 2s
       failureRateThreshold: 90
       eventConsumerBufferSize: 10
-      
   instances:
-        testApplication/test/get-response1:
-            baseConfig: default
-            failureRateThreshold: 10
+    backendB/test/name:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 10
+      permittedNumberOfCallsInHalfOpenState: 3
+      waitDurationInOpenState: 5s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10
