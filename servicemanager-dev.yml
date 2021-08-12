@@ -16,3 +16,7 @@ resilience4j.circuitbreaker:
       recordExceptions:
         - org.springframework.web.client.HttpServerErrorException
         - java.io.IOException
+  instance:
+        testApplication/test/get-reponse1:
+            baseConfig: default
+            failureRateThreshold: 10
