@@ -20,5 +20,5 @@ resilience4j.circuitbreaker:
       minimumNumberOfCalls: 10
       permittedNumberOfCallsInHalfOpenState: 3
       waitDurationInOpenState: 5s
-      failureRateThreshold: 50
+      failureRateThreshold: 20
       eventConsumerBufferSize: 10
