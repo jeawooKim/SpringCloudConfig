@@ -32,8 +32,8 @@ eureka:
     hostname: localhost
     
 midas:
-    testApplication:
-        loadbalancer: random
-		timeout: 1000
-		retryCount: 3
-		retryDelay: 6000
+  testApplication:
+    loadbalancer: random
+    timeout: 1000
+    retryCount: 3
+    retryDelay: 6000
