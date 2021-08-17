@@ -30,3 +30,10 @@ eureka:
       defaultZone: ${EUREKA_URL:http://127.0.0.1:8787/eureka/} #eureka server의 ip주소 
   instance:
     hostname: localhost
+    
+midas:
+    testApplication:
+        loadbalancer: random
+		timeout: 1000
+		retryCount: 3
+		retryDelay: 6000
