@@ -1,28 +1,41 @@
 midas:
-  domain-name: test
-  application-name: app2
+  domain-name: testCallerDomain
+  application-name: testCallerapp
+    loggers:
+		# application logger 설정 추가 
+		# logger name은 application name으로 자동 설정 
+		# 생략시 default 값으로 설정 
+        application-logger:
+            path: ./test 
+            log-level: debug
+            appenders: testAppender1, testAppender2	
+		# service logger 설정 추가 
+		# logger name은 service name으로 자동 설정 
+		# 생략시 default 값으로 설정 
+        service-logger:
+            loggerName1:  
+                log-level: info
+                appenders: testAppender1, testAppender2	
+            loggerName2:  
+                log-level: info
+                appenders: testAppender1, testAppender2	
+        logger-appenders:
+            testAppender1:
+                class: org.apache.log4j.ConsoleAppender 
+                layout: 
+                    type: org.apache.log4j.PatternLayout
+                    pattern: [%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [%c{1}:%L] - %m%n
+
   service-meta:
-    test2:
-      app1:
+    testCalleeDomain:
+      testCalleeApp1:
         service-handler: MCIServiceHandler
         service-lists: 
-          MciService1: 
+          TestCalleeService: 
             address: "localhost:8099"
             path : /test/mci
             common-header : com.tmax.superspring.midas.servicemanager.CommonText
             output-type : com.tmax.superspring.midas.servicemanager.CommonDTO
             time-out : 6000
-          
-      app3:
-        loadbalancer: random
-        service-handler: SpringCloudServiceHandler
-        failover-enable: true
-        service-lists: 
-          testService1: 
-            http-method: GET
-            path: /string
-            output-type: java.lang.String
-          testService2: 
-            http-method: GET
-            path: /get-response2
-            output-type: com.tmax.superspring.CommonText
+	
+				
