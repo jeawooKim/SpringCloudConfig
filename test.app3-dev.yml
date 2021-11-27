@@ -34,5 +34,3 @@ midas:
             common-header : com.tmax.superspring.midas.servicemanager.CommonText
             output-type : com.tmax.superspring.midas.servicemanager.CommonDTO
             time-out : 6000
-	
-				
