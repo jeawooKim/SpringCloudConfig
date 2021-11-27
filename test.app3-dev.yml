@@ -6,14 +6,14 @@ midas:
     # logger name은 application name으로 자동 설정 
     # 생략시 default 값으로 설정 
     application-logger:
-      log-level: warn
+      log-level: info
       appenders: testAppender1, testAppender2	
     # service logger 설정 추가 
     # logger name은 service name으로 자동 설정 
     # 생략시 default 값으로 설정 
     service-logger:
       loggerName1:  
-        log-level: fatal
+        log-level: warn
         appenders: testAppender1, testAppender2	
       loggerName2:  
         log-level: info
