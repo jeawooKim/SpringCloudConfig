@@ -6,7 +6,6 @@ midas:
     # logger name은 application name으로 자동 설정 
     # 생략시 default 값으로 설정 
     application-logger:
-      path: "/test" 
       log-level: debug
       appenders: testAppender1, testAppender2	
     # service logger 설정 추가 
@@ -24,7 +23,6 @@ midas:
           class: org.apache.log4j.ConsoleAppender 
           layout: 
             type: org.apache.log4j.PatternLayout
-            pattern: "[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [%c{1}:%L] - %m%n"
 
   service-meta:
     testCalleeDomain:
@@ -33,7 +31,6 @@ midas:
         service-lists: 
           TestCalleeService: 
             address: "localhost:8099"
-            path : /test/mci
             common-header : com.tmax.superspring.midas.servicemanager.CommonText
             output-type : com.tmax.superspring.midas.servicemanager.CommonDTO
             time-out : 6000
