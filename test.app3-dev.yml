@@ -13,7 +13,7 @@ midas:
     # 생략시 default 값으로 설정 
     service-logger:
       loggerName1:  
-        log-level: info
+        log-level: debug
         appenders: testAppender1, testAppender2	
       loggerName2:  
         log-level: info
