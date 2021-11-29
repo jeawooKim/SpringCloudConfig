@@ -3,14 +3,14 @@ midas:
   application-name: app2
   loggers:
     applicationLogger:
-      logLevel: debug
+      logLevel: warn
 #      appenders: 
 #        - testAppender1
 #        - testAppender2
     serviceLogger:
       - 
         name: loggerName1  
-        logLevel: info
+        logLevel: warn
 #        appenders: 
 #          - testAppender1
 #          - testAppender2
