@@ -1,36 +1,29 @@
-midas:
-  domain-name: testCallerDomain
-  application-name: testCallerapp
+midas: 
+  domain-name: test
+  application-name: app2
   loggers:
-    # application logger 설정 추가 
-    # logger name은 application name으로 자동 설정 
-    # 생략시 default 값으로 설정 
-    application-logger:
-      log-level: fatal
-      appenders: testAppender1, testAppender2	
-    # service logger 설정 추가 
-    # logger name은 service name으로 자동 설정 
-    # 생략시 default 값으로 설정 
-    service-logger:
-      loggerName1:  
-        log-level: fatal
-        appenders: testAppender1, testAppender2	
-      loggerName2:  
-        log-level: info
-        appenders: testAppender1, testAppender2	
-      logger-appenders:
-        testAppender1:
-          class: org.apache.log4j.ConsoleAppender 
-          layout: 
-            type: org.apache.log4j.PatternLayout
-
-  service-meta:
-    testCalleeDomain:
-      testCalleeApp1:
-        service-handler: MCIServiceHandler
-        service-lists: 
-          TestCalleeService: 
-            address: "localhost:8099"
-            common-header : com.tmax.superspring.midas.servicemanager.CommonText
-            output-type : com.tmax.superspring.midas.servicemanager.CommonDTO
-            time-out : 6000
+    applicationLogger:
+      logLevel: debug
+#      appenders: 
+#        - testAppender1
+#        - testAppender2
+    serviceLogger:
+      - 
+        name: loggerName1  
+        logLevel: info
+#        appenders: 
+#          - testAppender1
+#          - testAppender2
+      - 
+        name: loggerName2  
+        logLevel: fatal
+        appenders: 
+          - testAppender1
+          - testAppender2
+    loggerAppenders:
+      - 
+        name: testAppender1
+        className: org.apache.log4j.ConsoleAppender 
+        layout: 
+          type: org.apache.log4j.PatternLayout
+          pattern: "[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [%c{1}:%L] - %m%n"
