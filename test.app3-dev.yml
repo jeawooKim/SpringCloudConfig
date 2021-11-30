@@ -10,7 +10,7 @@ midas:
     serviceLogger:
       - 
         name: loggerName1  
-        logLevel: warn
+        logLevel: info
 #        appenders: 
 #          - testAppender1
 #          - testAppender2
