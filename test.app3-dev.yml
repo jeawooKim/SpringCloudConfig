@@ -1,34 +1,34 @@
 midas: 
   domain-name: test
   application-name: app2
-#  loggers:
-#    applicationLogger:
-#      logLevel: warn
-#      formatter: com.tmax.superspring.TestMessageFactory
-#      appenders: 
-#        - testAppender1
-#        - testAppender2
-#    serviceLogger:
-#      - 
-#        name: loggerName1  
-#        logLevel: fatal
-#        appenders: 
-#          - testAppender1
-#          - testAppender2
-#      - 
-#        name: loggerName2  
-#       logLevel: info
-#        formatter: com.tmax.superspring.TestMessageFactory2
-#        appenders: 
-#          - testAppender1
-#          - testAppender2
-#    loggerAppenders:
-#      - 
-#        name: testAppender1
-#        className: ConsoleAppender 
-#        layout: 
-#          type: PatternLayout
-#          pattern: "%m%n"
-#      - 
-#        name: testAppender2
-#        className: RollingFileAppender 
+  loggers:
+    applicationLogger:
+      logLevel: warn
+      formatter: com.tmax.superspring.TestMessageFactory
+      appenders: 
+        - testAppender1
+        - testAppender2
+    serviceLogger:
+      - 
+        name: loggerName1  
+        logLevel: fatal
+        appenders: 
+          - testAppender1
+          - testAppender2
+      - 
+        name: loggerName2  
+       logLevel: info
+        formatter: com.tmax.superspring.TestMessageFactory2
+        appenders: 
+          - testAppender1
+          - testAppender2
+    loggerAppenders:
+      - 
+        name: testAppender1
+        className: ConsoleAppender 
+        layout: 
+          type: PatternLayout
+          pattern: "%m%n"
+      - 
+        name: testAppender2
+        className: RollingFileAppender 
