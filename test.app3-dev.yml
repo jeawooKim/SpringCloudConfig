@@ -12,13 +12,13 @@ midas:
     serviceLogger:
       - 
         name: loggerName1  
-        logLevel: info
+        logLevel: debug
         appenders: 
           - testAppender1
           - testAppender2
       - 
         name: loggerName2  
-        logLevel: info
+        logLevel: warn
 #        formatter: com.tmax.superspring.TestMessageFactory2
 #        appenders: 
 #          - testAppender1
