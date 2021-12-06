@@ -4,7 +4,7 @@ midas:
   loggers:
     applicationLogger:
       logLevel: warn
-#      formatter: com.tmax.superspring.TestMessageFactory
+      formatter: com.tmax.superspring.TestMessageFactory
 #      path : "/superSpring/testLogPath/"
 #      appenders: 
 #        - testAppender1
@@ -12,7 +12,8 @@ midas:
     serviceLogger:
       - 
         name: loggerName1  
-        logLevel: fatal
+        logLevel: info
+        formatter: com.tmax.superspring.TestMessageFactory2
         appenders: 
           - testAppender1
           - testAppender2
