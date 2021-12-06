@@ -6,7 +6,7 @@ midas:
       logLevel: fatal
       formatter: com.tmax.superspring.TestMessageFactory
       appenders: 
-        - testAppender1
+ #       - testAppender1
         - testAppender2
     serviceLogger:
       - 
