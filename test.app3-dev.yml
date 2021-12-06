@@ -33,3 +33,6 @@ midas:
       - 
         name: testAppender2
         className: RollingFileAppender 
+        layout: 
+          type: PatternLayout
+          pattern: "[%t] %m%n"
